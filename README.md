@@ -1,7 +1,7 @@
-Role Name
+Ansible Role: Docker and Docker Compose
 =========
 
-Install Docker and Docker Compose any Ubuntu Linux system.
+Install Docker and Docker Compose on any Ubuntu Linux system.
 
 Perform all necessary tasks to setup and run Docker and Docker Compose:
 
@@ -19,9 +19,11 @@ Role Variables
 --------------
 
 If you want to change user which will be added to Docker group
-change contents of system_user variable (defaults/main.yml)
+change contents of `system_user` variable (see: `defaults/main.yml`)
 
+```
 system_user: ubuntu
+```
 
 Dependencies
 ------------
@@ -31,16 +33,13 @@ None.
 Example Playbook
 ----------------
 
+```
 - hosts: servers
   roles:
-    - { role:  AdnanHodzic.docker-compose }
+    - { role: AdnanHodzic.docker-compose }
+```
 
 License
 -------
 
 GPLv3
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).

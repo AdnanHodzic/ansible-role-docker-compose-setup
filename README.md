@@ -1,9 +1,9 @@
 Ansible Role: Docker and Docker Compose
 =========
 
-Install Docker and Docker Compose on any Ubuntu Linux system.
+**Install Docker and Docker Compose on any Ubuntu Linux system.**
 
-Perform all necessary tasks to setup and run Docker and Docker Compose:
+This Ansible role will perform all necessary tasks to setup and run Docker and Docker Compose:
 
   * Install packages necessary for APT to use a repository over HTTPS.
   * Add and setup official Docker APT repositories.

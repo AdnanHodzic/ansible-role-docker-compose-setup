@@ -35,6 +35,10 @@ Example Playbook
 
 ```
 - hosts: servers
+  remote_user: ubuntu # optional
+  gather_facts: yes
+  become: yes
+
   roles:
     - { role: AdnanHodzic.docker-compose }
 ```

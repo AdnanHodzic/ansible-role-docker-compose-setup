@@ -1,7 +1,4 @@
 ---
-# ToDo:
-# Add task to remove old versions (docker docker-engine)?
-
 - name: Install recommended package (to use AUFS storage drivers)
   apt:
     name: "{{ item }}"

@@ -1,3 +1,2 @@
 ---
-# user to add to Docker group
-system_user: ubuntu
+enable_fact_gather: "- setup: # aka gather_facts: yes"

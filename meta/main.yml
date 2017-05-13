@@ -1,6 +1,6 @@
 galaxy_info:
   author: Adnan Hodzic
-  description: Install Python on newly bootstrapped Ubuntu host
+  description: Install Docker and Docker Compose on any Ubuntu Linux system.
 
   license: GPLv3
 
@@ -14,6 +14,6 @@ galaxy_info:
   galaxy_tags:
   - development
   - system
-  - bootstrap
-  - python
+  - docker
+  - compose
   - ubuntu

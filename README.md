@@ -1,12 +1,14 @@
-Ansible Role: Install Python on newly bootstrapped Ubuntu host
+Ansible Role: Docker and Docker Compose
 =========
 
-**Install Python on newly bootstrapped Ubuntu host**
+**Install Docker and Docker Compose on any Ubuntu Linux system.**
 
-This Ansible role will install Python on newly bootstrapped host. This is usually
-a new host which you never even SSH-ed to.
+This Ansible role will perform all necessary tasks to setup and run Docker and Docker Compose:
 
-In order for Ansible to work, Python must be installed (if missing).
+  * Install packages necessary for APT to use a repository over HTTPS.
+  * Add and setup official Docker APT repositories.
+  * Install packages needed for AUFS storage drivers.
+  * Add user to Docker group.
 
 Requirements
 ------------
@@ -16,11 +18,11 @@ None.
 Role Variables
 --------------
 
-Comment `enable_fact_gather` variable if you don't want to gather facts
-after this task has been executed (see: `defaults/main.yml`)
+If you want to change user which will be added to Docker group
+change contents of `system_user` variable (see: `defaults/main.yml`)
 
 ```
-enable_fact_gather: "- setup: # aka gather_facts: yes"
+system_user: ubuntu
 ```
 
 Dependencies
@@ -34,13 +36,11 @@ Example Playbook
 ```
 - hosts: servers
   remote_user: ubuntu # optional
+  gather_facts: yes
   become: yes
 
-  pre_tasks:
-  roles: [ AdnanHodzic.python-ubuntu-bootstrap ]
-
   roles:
-    ...
+    - { role: AdnanHodzic.docker-compose }
 ```
 
 License

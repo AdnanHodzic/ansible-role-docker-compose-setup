@@ -1,7 +1,7 @@
-Ansible Role: Docker and Docker Compose
+Ansible Role: Docker and Docker Compose Setup
 =========
 
-**Install Docker and Docker Compose on any Ubuntu Linux system.**
+**Install and Setup Docker and Docker Compose on any Ubuntu Linux system.**
 
 This Ansible role will perform all necessary tasks to setup and run Docker and Docker Compose:
 

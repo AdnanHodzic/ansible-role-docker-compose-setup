@@ -9,6 +9,8 @@ This Ansible role will perform all necessary tasks to setup and run Docker and D
   * Add and setup official Docker APT repositories.
   * Install packages needed for AUFS storage drivers.
   * Add user to Docker group.
+  
+This role was created as part of [containerized-wordpress-project](https://github.com/AdnanHodzic/containerized-wordpress-project)
 
 Requirements
 ------------

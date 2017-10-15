@@ -6,7 +6,6 @@
     install_recommends: no
     state: present
   with_items:
-  - linux-image-extra-{{ ansible_kernel }}
   - linux-image-extra-virtual
 
 - name: Install packages necessary for APT to use a repository over HTTPS

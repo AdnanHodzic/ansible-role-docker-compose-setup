@@ -1,4 +1,4 @@
-Ansible Role: Docker and Docker Compose Setup
+Ansible Role: Docker and Docker Compose setup
 =========
 
 **Install and Setup Docker and Docker Compose on any Ubuntu Linux system.**
@@ -42,7 +42,7 @@ Example Playbook
   become: yes
 
   roles:
-    - { role: AdnanHodzic.docker-compose-setup }
+    - { role: AdnanHodzic.docker-compose }
 ```
 
 License

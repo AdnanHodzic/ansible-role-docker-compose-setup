@@ -1,24 +1,18 @@
 ---
 - name: Install recommended package (to use AUFS storage drivers)
   apt:
-    name: "{{ item }}"
-    update_cache: yes
-    install_recommends: no
+    pkg:
+     - linux-image-extra-virtual
     state: present
-  with_items:
-  - linux-image-extra-virtual
 
 - name: Install packages necessary for APT to use a repository over HTTPS
   apt:
-    name: "{{ item }}"
-    update_cache: yes
-    install_recommends: no
+    pkg:
+     - apt-transport-https
+     - ca-certificates
+     - curl
+     - software-properties-common
     state: present
-  with_items:
-  - apt-transport-https
-  - ca-certificates
-  - curl
-  - software-properties-common
 
 - name: Add official Docker GPG key
   apt_key:
@@ -35,13 +29,10 @@
 
 - name: Install docker-ce and docker-compose
   apt:
-    name: "{{ item }}"
-    update_cache: yes
-    install_recommends: yes
+    pkg:
+      - docker-ce
+      - docker-compose
     state: present
-  with_items:
-  - docker-ce
-  - docker-compose
 
 - name: Add users to the Docker group
   user:

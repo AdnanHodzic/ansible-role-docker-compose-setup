@@ -24,7 +24,7 @@ If you want to change user which will be added to Docker group
 change contents of `system_user` variable (see: `defaults/main.yml`)
 
 ```
-system_user: ubuntu
+system_user: docker
 ```
 
 Dependencies

@@ -5,8 +5,7 @@
     update_cache: yes
     install_recommends: no
     state: present
-  with_items:
-  - linux-image-extra-virtual
+  with_items: [ 'linux-image-extra-virtual' ]
   when: ansible_distribution == 'Ubuntu'
 
 - name: Install packages necessary for APT to use a repository over HTTPS
@@ -15,11 +14,7 @@
     update_cache: yes
     install_recommends: no
     state: present
-  with_items:
-  - apt-transport-https
-  - ca-certificates
-  - curl
-  - software-properties-common
+  with_items: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common' ]
 
 - name: Add official Docker GPG key (Ubuntu)
   apt_key:
@@ -35,7 +30,7 @@
 
 - name: Add official Docker APT repository (Ubuntu)
   apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
     state: present
     filename: 'docker-official'
     update_cache: yes
@@ -43,7 +38,7 @@
 
 - name: Add official Docker APT repository (Debian)
   apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/debian {{ ansible_distribution_release }} stable
+    repo: "deb [arch=amd64] https://download.docker.com/linux/debian {{ ansible_distribution_release }} stable"
     state: present
     filename: 'docker-official'
     update_cache: yes

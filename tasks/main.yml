@@ -39,6 +39,7 @@
     state: present
     filename: 'docker-official'
     update_cache: yes
+  when: ansible_distribution == 'Ubuntu'
 
 - name: Add official Docker APT repository (Debian)
   apt_repository:
@@ -46,6 +47,7 @@
     state: present
     filename: 'docker-official'
     update_cache: yes
+  when: ansible_distribution == 'Debian'
 
 - name: Install docker-ce and docker-compose
   apt:

@@ -1,6 +1,6 @@
 galaxy_info:
   author: Adnan Hodzic
-  description: Install and setup Docker and Docker Compose on any version of Ubuntu Linux system.
+  description: Install and setup Docker and Docker Compose on any version of Debian and Ubuntu Linux system.
 
   license: GPLv3
 
